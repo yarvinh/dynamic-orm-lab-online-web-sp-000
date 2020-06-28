@@ -33,7 +33,6 @@ class InteractiveRecord
      DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE name = ?",name )
    end
    def self.find_by(value)
-      value.map{|v,k| p k
-       DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE grade = ? OR name = ? ", k,k )}[0]
+      value.map{|v,k| DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE grade = ? OR name = ? ", k,k )}[0]
    end
 end
